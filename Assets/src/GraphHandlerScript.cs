@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GraphHandlerScript : MonoBehaviour
@@ -8,6 +9,11 @@ public class GraphHandlerScript : MonoBehaviour
 
     private GameObject selectedPrefab;
     private bool placing = false;
+
+    public List<Rect> blockedAreas = new List<Rect>() {
+        new Rect(-8.5f, -3.5f, -5.5f, -5),  // Example: block area from (-2, -1) to (2, 1)
+        new Rect(3, 2, 2, 2)     // Another blocked zone
+    };
 
     void Update()
     {
@@ -22,7 +28,7 @@ public class GraphHandlerScript : MonoBehaviour
 
         currentPreviewBlock.transform.position = snappedPos;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && CanPlaceBlock())
         {
             // Confirm placement
             PlaceBlock(snappedPos);
@@ -37,8 +43,30 @@ public class GraphHandlerScript : MonoBehaviour
         placing = true;
     }
 
+    bool IsInBlockedArea(Vector2 pos)
+    {
+        foreach (Rect area in blockedAreas)
+        {
+            if (area.Contains(pos))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    bool CanPlaceBlock()
+    {
+        return true;
+    }
+
     void PlaceBlock(Vector2 pos)
     {
+        if (IsInBlockedArea(pos))
+        {
+            Debug.Log("Blocked: This area is not allowed");
+            return;
+        }
         Instantiate(selectedPrefab, pos, Quaternion.identity);
         Destroy(currentPreviewBlock);
         placing = false;
@@ -54,4 +82,7 @@ public class GraphHandlerScript : MonoBehaviour
             renderer.color = color;
         }
     }
+
+
+
 }
