@@ -35,6 +35,12 @@ public class GraphHandlerScript : MonoBehaviour
         {
             // Confirm placement
             PlaceBlock(snappedPos);
+        } else if (!CanPlaceBlock()) 
+        {
+            SetPreviewModeNoPlace(currentPreviewBlock);
+        } else if (CanPlaceBlock())
+        {
+            SetPreviewModePlace(currentPreviewBlock);
         }
     }
 
@@ -113,6 +119,32 @@ public class GraphHandlerScript : MonoBehaviour
         {
             Color color = renderer.color;
             color.a = isPreview ? 0.5f : 1f;
+            renderer.color = color;
+        }
+    }
+
+    void SetPreviewModeNoPlace(GameObject obj)
+    {
+        var renderer = obj.GetComponent<SpriteRenderer>();
+        if (renderer != null)
+        {
+            Color color = renderer.color;
+            color.g = 0.2f;
+            color.b = 0.2f;
+            color.a = 0.5f;
+            renderer.color = color;
+        }
+    }
+
+    void SetPreviewModePlace(GameObject obj)
+    {
+        var renderer = obj.GetComponent<SpriteRenderer>();
+        if (renderer != null)
+        {
+            Color color = renderer.color;
+            color.g = 1f;
+            color.b = 1f;
+            color.a = 0.5f;
             renderer.color = color;
         }
     }
