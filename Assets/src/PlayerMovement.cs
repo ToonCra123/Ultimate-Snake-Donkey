@@ -40,6 +40,11 @@ public class PlayerMovement2D : MonoBehaviour
         {
             isGrounded = true;
         }
+
+        if(collision.gameObject.tag == "winning_square")
+        {
+            // do something when he wins
+        }
     }
 
 
