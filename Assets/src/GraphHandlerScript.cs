@@ -18,10 +18,6 @@ public class GraphHandlerScript : MonoBehaviour
 
     void Update()
     {
-        if (!placing && Input.GetMouseButtonUp(0))
-        {
-            StartPlacingBlock(0);
-        }
         if (!placing) return;
 
         Vector2 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
@@ -39,6 +35,11 @@ public class GraphHandlerScript : MonoBehaviour
             // Confirm placement
             PlaceBlock(snappedPos);
         }
+    }
+
+    public bool isPlacing()
+    {
+        return placing;
     }
 
     public void StartPlacingBlock(int index)
