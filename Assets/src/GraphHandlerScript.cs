@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Profiling;
 using UnityEngine;
 
 public class GraphHandlerScript : MonoBehaviour
@@ -66,7 +67,14 @@ public class GraphHandlerScript : MonoBehaviour
     // Fix this plz
     bool CanPlaceBlock()
     {
-        return true;
+        try
+        {
+            BoxCollider2D blockBox = currentPreviewBlock.GetComponent<BoxCollider2D>();
+            return !CheckOverlaps(blockBox);
+        } catch
+        { 
+            return false; 
+        }
     }
 
     void PlaceBlock(Vector2 pos)
@@ -79,6 +87,23 @@ public class GraphHandlerScript : MonoBehaviour
         Instantiate(selectedPrefab, pos, currRotation);
         Destroy(currentPreviewBlock);
         placing = false;
+    }
+
+    bool CheckOverlaps(BoxCollider2D myBox)
+    {
+        BoxCollider2D[] allBoxes = FindObjectsByType<BoxCollider2D>(FindObjectsSortMode.None);
+
+        foreach (BoxCollider2D otherBox in allBoxes)
+        {
+            if (otherBox == myBox) continue; // skip self
+
+            if (myBox.bounds.Intersects(otherBox.bounds))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     void SetPreviewMode(GameObject obj, bool isPreview)

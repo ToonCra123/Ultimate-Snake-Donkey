@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6116946398314300507}
   - component: {fileID: 1555786661521527641}
   - component: {fileID: 8546167590752636043}
+  - component: {fileID: 5395027599139950753}
   m_Layer: 0
   m_Name: SquareLongWays
   m_TagString: ground
@@ -134,3 +135,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5395027599139950753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6083125789473391248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0a27112ce72dc44af512013be637f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canPlace: 0
