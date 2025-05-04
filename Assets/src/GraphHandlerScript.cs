@@ -9,9 +9,10 @@ public class GraphHandlerScript : MonoBehaviour
 
     private GameObject selectedPrefab;
     private bool placing = false;
+    private Quaternion currRotation;
 
     public List<Rect> blockedAreas = new List<Rect>() {
-        new Rect(-8.5f, -3.5f, -5.5f, -5),  // Example: block area from (-2, -1) to (2, 1)
+        new Rect(-9f, -4f, -6f, -6f),  // Example: block area from (-2, -1) to (2, 1)
         new Rect(3, 2, 2, 2)     // Another blocked zone
     };
 
@@ -27,6 +28,11 @@ public class GraphHandlerScript : MonoBehaviour
         Vector2 snappedPos = Utils.SnapToGrid(mouseWorldPos);
 
         currentPreviewBlock.transform.position = snappedPos;
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            currentPreviewBlock.transform.Rotate(0, 0, 90);
+            currRotation = currentPreviewBlock.transform.rotation;
+        }
 
         if (Input.GetMouseButtonDown(0) && CanPlaceBlock())
         {
@@ -39,6 +45,7 @@ public class GraphHandlerScript : MonoBehaviour
     {
         selectedPrefab = placeablePrefabs[index];
         currentPreviewBlock = Instantiate(selectedPrefab);
+        currRotation = currentPreviewBlock.transform.rotation;
         SetPreviewMode(currentPreviewBlock, true);
         placing = true;
     }
@@ -55,6 +62,7 @@ public class GraphHandlerScript : MonoBehaviour
         return false;
     }
 
+    // Fix this plz
     bool CanPlaceBlock()
     {
         return true;
@@ -67,7 +75,7 @@ public class GraphHandlerScript : MonoBehaviour
             Debug.Log("Blocked: This area is not allowed");
             return;
         }
-        Instantiate(selectedPrefab, pos, Quaternion.identity);
+        Instantiate(selectedPrefab, pos, currRotation);
         Destroy(currentPreviewBlock);
         placing = false;
     }

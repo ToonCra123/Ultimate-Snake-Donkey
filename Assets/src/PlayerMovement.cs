@@ -1,3 +1,4 @@
+using Unity.Jobs;
 using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
@@ -5,11 +6,6 @@ public class PlayerMovement2D : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 8f;
     public float jumpForce = 12f;
-
-    [Header("Ground Check")]
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -26,7 +22,7 @@ public class PlayerMovement2D : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
 
         // Jumping
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
@@ -34,10 +30,25 @@ public class PlayerMovement2D : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Ground check
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
         // Move
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "ground")
+        {
+            isGrounded = false;
+        }
     }
 }
