@@ -13,9 +13,17 @@ public class GameStateManager : MonoBehaviour
     public Camera mainCam;
 
 
-    public GameObject playerPrefab;
+    [Header("Selection Box")]
+    public GameObject selectionBox;
 
+
+    [Header("Player Prefab")]
+    public GameObject playerPrefab;
     private GameObject playerShit;
+
+
+    [Header("Selection Handler")]
+    public SelectionHandler selectionHandler;
 
     private GAME_STATES gameState;
     private enum GAME_STATES
@@ -29,12 +37,16 @@ public class GameStateManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        startPlacing();
+        selectionBox.SetActive(false);
+
+        startSelecting();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        // I have no idea what is happening
         if (!graphHandler.isPlacing() && gameState == GAME_STATES.PLACING)
         {
             gameState = GAME_STATES.PLAYING; // god kill me
@@ -52,7 +64,7 @@ public class GameStateManager : MonoBehaviour
             return; // exit for some reason fixed something
         } else if (gameState == GAME_STATES.SELECTING)
         {
-
+            
         } else if (gameState == GAME_STATES.PLAYING)
         {
             CameraScriptShit cameraUtil = mainCam.GetComponent<CameraScriptShit>();
@@ -96,5 +108,12 @@ public class GameStateManager : MonoBehaviour
             }
         }
         startPlacing();
+    }
+
+    public void startSelecting()
+    {
+        gameState = GAME_STATES.SELECTING;
+        selectionBox.SetActive(true);
+        selectionHandler.StartSelectingBlock();
     }
 }

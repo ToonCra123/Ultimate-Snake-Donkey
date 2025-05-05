@@ -12,6 +12,9 @@ public class GraphHandlerScript : MonoBehaviour
     private bool placing = false;
     private Quaternion currRotation;
 
+
+
+
     public List<Rect> blockedAreas = new List<Rect>() {
         new Rect(-9f, -4f, -6f, -6f),  // Example: block area from (-2, -1) to (2, 1)
         new Rect(3, 2, 2, 2)     // Another blocked zone
