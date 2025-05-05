@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 876004382}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: winning_square
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1060,7 +1060,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -3.0351105, y: 0.5718317}
+  m_Offset: {x: -30.483955, y: -35.194843}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1070,7 +1070,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 50.177567, y: 4.430994}
+  m_Size: {x: 105.07526, y: 22.175667}
   m_EdgeRadius: 0
 --- !u!4 &2077404161
 Transform:
