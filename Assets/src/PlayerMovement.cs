@@ -10,10 +10,12 @@ public class PlayerMovement2D : MonoBehaviour
     public float moveSpeed = 8f;
     public float jumpForce = 12f;
 
-
     public bool isOnWall;
 
     public BoxCollider2D wallCollider;
+
+    [Header("Game State")]
+    public GameStateManager state;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -83,13 +85,6 @@ public class PlayerMovement2D : MonoBehaviour
         {
             isGrounded = true;
         }
-
-        if (collision.gameObject.tag == "winning_square")
-        {
-            // do something when he wins
-        }
-
-
     }
 
 
@@ -110,7 +105,17 @@ public class PlayerMovement2D : MonoBehaviour
         if (collision.gameObject.tag == "Kill Trigger")
         {
             GameObject.Destroy(gameObject);
+            state.playerDied();
             Debug.Log("Player is dead");
         }
+
+
+        if (collision.gameObject.tag == "winning_square")
+        {
+            // do something when he wins
+            GameObject.Destroy(gameObject);
+            state.playerWon();
+        }
+
     }
 }
