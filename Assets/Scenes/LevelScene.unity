@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 382283141}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.9, y: 19.6, z: 0}
+  m_LocalPosition: {x: -40.9, y: 19.6, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -175,7 +175,7 @@ Transform:
   m_GameObject: {fileID: 626612339}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.2, y: 19, z: 0}
+  m_LocalPosition: {x: -15.2, y: 19, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -380,7 +380,7 @@ MonoBehaviour:
   mainCamera: {fileID: 716912625}
   currentPreviewBlock: {fileID: 0}
   placeablePrefabs:
-  - {fileID: 6083125789473391248, guid: 9855ea4578d5f9f4bb23f3dce704d0d0, type: 3}
+  - {fileID: 2478250187967890005, guid: 9855ea4578d5f9f4bb23f3dce704d0d0, type: 3}
   - {fileID: 3061974099161123472, guid: 8223b08ef18c74e97b84246da9efff02, type: 3}
   - {fileID: 7224656153167275708, guid: 135791d45847f46e9a3aba16fa283ad4, type: 3}
   blockedAreas:
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placeablePrefabs:
-  - {fileID: 6083125789473391248, guid: 9855ea4578d5f9f4bb23f3dce704d0d0, type: 3}
+  - {fileID: 2478250187967890005, guid: 9855ea4578d5f9f4bb23f3dce704d0d0, type: 3}
   - {fileID: 3061974099161123472, guid: 8223b08ef18c74e97b84246da9efff02, type: 3}
   - {fileID: 7224656153167275708, guid: 135791d45847f46e9a3aba16fa283ad4, type: 3}
   spawnChoices:
@@ -452,7 +452,6 @@ MonoBehaviour:
   - {fileID: 626612339}
   - {fileID: 1479088889}
   - {fileID: 2047678625}
-  choices: []
 --- !u!1 &793860059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,7 +1132,7 @@ Transform:
   m_GameObject: {fileID: 1479088889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.2, y: -1.8, z: 0}
+  m_LocalPosition: {x: -42.2, y: -1.8, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1236,7 +1235,7 @@ MonoBehaviour:
   mainCam: {fileID: 716912625}
   selectionBox: {fileID: 787724831}
   playerPrefab: {fileID: 6532294109401548898, guid: 23628a1fd696e8642a21918d2e8abd21, type: 3}
-  selectionHandler: {fileID: 0}
+  selectionHandler: {fileID: 787724833}
 --- !u!4 &2013717359
 Transform:
   m_ObjectHideFlags: 0
@@ -1277,7 +1276,7 @@ Transform:
   m_GameObject: {fileID: 2047678625}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.2, y: -2.3, z: 0}
+  m_LocalPosition: {x: -15.2, y: -2.3, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
