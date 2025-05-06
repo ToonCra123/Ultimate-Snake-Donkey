@@ -147,4 +147,9 @@ public class GameStateManager : MonoBehaviour
     {
         selectionBox.SetActive(false);
     }
+
+    public bool shouldObjectsMove()
+    {
+        return gameState == GAME_STATES.PLAYING;
+    }
 }

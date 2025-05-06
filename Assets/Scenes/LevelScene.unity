@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47321e6fa9bd69429a0669ad98802c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: {fileID: 2013717358}
   mainCamera: {fileID: 716912625}
   currentPreviewBlock: {fileID: 0}
   placeablePrefabs:
@@ -1143,6 +1144,10 @@ PrefabInstance:
       propertyPath: state
       value: 
       objectReference: {fileID: 2013717358}
+    - target: {fileID: 8159186828227291184, guid: 359e47f6f904542c2a26d268556f22c8, type: 3}
+      propertyPath: 'placeablePrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3061974099161123472, guid: 8223b08ef18c74e97b84246da9efff02, type: 3}
     - target: {fileID: 9039553008752578401, guid: 359e47f6f904542c2a26d268556f22c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.678

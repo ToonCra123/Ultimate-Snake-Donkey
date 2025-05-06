@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GraphHandlerScript : MonoBehaviour
 {
+    [Header("Game State")]
+    public GameStateManager state;
+
     public Camera mainCamera;
     public GameObject currentPreviewBlock;
     public GameObject[] placeablePrefabs;
@@ -95,8 +98,13 @@ public class GraphHandlerScript : MonoBehaviour
     void PlaceBlock(Vector2 pos)
     {
         if (!CanPlaceBlock()) return;
-        Instantiate(selectedPrefab, pos, currRotation);
+        GameObject cool = Instantiate(selectedPrefab, pos, currRotation);
         Destroy(currentPreviewBlock);
+        if (cool.GetComponent<MoveableTile>() != null)
+        {
+            cool.GetComponent<MoveableTile>().state = state;
+        }
+        timout_timer = 0;
         placing = false;
     }
 
