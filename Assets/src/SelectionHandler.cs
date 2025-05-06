@@ -8,8 +8,11 @@ public class SelectionHandler : MonoBehaviour
     // only four spawn points
     public GameObject[] spawnChoices;
 
+    [Header("State Manager")]
+    public GameStateManager state;
+
     private GameObject[] choices;
-    
+   
 
     bool placing;
     
@@ -17,11 +20,6 @@ public class SelectionHandler : MonoBehaviour
     {
         placing = false;
         choices = new GameObject[spawnChoices.Length];
-    }
-
-    void Update()
-    {
-        if (!placing) return;
     }
 
 
@@ -33,11 +31,25 @@ public class SelectionHandler : MonoBehaviour
         foreach (GameObject spawn in spawnChoices)
         {
             GameObject choice = Instantiate(placeablePrefabs[GetRandomPrefabIndex()], spawn.transform.position, Quaternion.identity);
-            choice.transform.position.z = -7;
+            choice.transform.position = new Vector3(choice.transform.position.x, choice.transform.position.y, -7f);
             choice.transform.localScale = new Vector3(5, 5, 5);
+
+            ClickableTile cb = choice.AddComponent<ClickableTile>();
+            cb.selectionManager = this;
+
             choices[i] = choice;
             i++;
         }
+    }
+
+    public void BlockClicked(GameObject gameObj)
+    {
+        foreach (GameObject choice in choices) 
+            choice.SetActive(false);
+
+        gameObj.GetComponent<ClickableTile>().selectionManager = null;
+        gameObj.transform.localScale = new Vector3(1, 1, 1);
+        state.SelectedObject(gameObj);
     }
 
     public int GetRandomPrefabIndex()

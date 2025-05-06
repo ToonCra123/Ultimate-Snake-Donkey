@@ -64,7 +64,7 @@ public class GameStateManager : MonoBehaviour
             return; // exit for some reason fixed something
         } else if (gameState == GAME_STATES.SELECTING)
         {
-            
+            return;
         } else if (gameState == GAME_STATES.PLAYING)
         {
             CameraScriptShit cameraUtil = mainCam.GetComponent<CameraScriptShit>();
@@ -78,9 +78,15 @@ public class GameStateManager : MonoBehaviour
         }
     }
 
-    void startPlacing()
+    void startPlacing(int i)
     {
-        graphHandler.StartPlacingBlock(0); // Replace With a system to pick a block
+        graphHandler.StartPlacingBlock(i); // Replace With a system to pick a block
+        gameState = GAME_STATES.PLACING; // Simple wwtf
+    }
+
+    void startPlacing(GameObject gmobj)
+    {
+        graphHandler.StartPlacingBlock(gmobj); // Replace With a system to pick a block
         gameState = GAME_STATES.PLACING; // Simple wwtf
     }
 
@@ -94,7 +100,7 @@ public class GameStateManager : MonoBehaviour
                 cameraUtil.StartSceneViewTransition();
             }
         }
-        startPlacing();
+        startSelecting();
     }
 
     public void playerWon()
@@ -107,7 +113,19 @@ public class GameStateManager : MonoBehaviour
                 cameraUtil.StartSceneViewTransition();
             }
         }
-        startPlacing();
+        startSelecting();
+    }
+
+    public void SelectedObjct(int index)
+    {
+        stopPlacing();
+        startPlacing(index);
+    }
+
+    public void SelectedObject(GameObject gameObjectIn)
+    {
+        stopPlacing();
+        startPlacing(gameObjectIn);
     }
 
     public void startSelecting()
@@ -115,5 +133,10 @@ public class GameStateManager : MonoBehaviour
         gameState = GAME_STATES.SELECTING;
         selectionBox.SetActive(true);
         selectionHandler.StartSelectingBlock();
+    }
+
+    public void stopPlacing()
+    {
+        selectionBox.SetActive(false);
     }
 }

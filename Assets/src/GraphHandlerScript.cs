@@ -12,6 +12,9 @@ public class GraphHandlerScript : MonoBehaviour
     private bool placing = false;
     private Quaternion currRotation;
 
+    private int timeout = 500;
+    private int timout_timer = 0;
+
 
 
 
@@ -23,6 +26,14 @@ public class GraphHandlerScript : MonoBehaviour
     void Update()
     {
         if (!placing) return;
+
+        if (timout_timer < timeout)
+        {
+            timout_timer++;
+            return;
+        }
+
+        selectedPrefab.SetActive(true);
 
         Vector2 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 snappedPos = Utils.SnapToGrid(mouseWorldPos);
@@ -54,7 +65,18 @@ public class GraphHandlerScript : MonoBehaviour
 
     public void StartPlacingBlock(int index)
     {
+        timout_timer = 0;
+
         selectedPrefab = placeablePrefabs[index];
+        currentPreviewBlock = Instantiate(selectedPrefab);
+        currRotation = currentPreviewBlock.transform.rotation;
+        SetPreviewMode(currentPreviewBlock, true);
+        placing = true;
+    }
+
+    public void StartPlacingBlock(GameObject gmObj)
+    {
+        selectedPrefab = gmObj;
         currentPreviewBlock = Instantiate(selectedPrefab);
         currRotation = currentPreviewBlock.transform.rotation;
         SetPreviewMode(currentPreviewBlock, true);
