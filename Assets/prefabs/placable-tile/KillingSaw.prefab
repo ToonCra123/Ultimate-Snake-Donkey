@@ -449,3 +449,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 0}
+  rotatePoint: {fileID: 5605040844478822198}
+  rotationSpeed: 50
+  rotatingShit: {fileID: 8234836184710161323}

@@ -100,6 +100,7 @@ public class GraphHandlerScript : MonoBehaviour
         if (!CanPlaceBlock()) return;
         GameObject cool = Instantiate(selectedPrefab, pos, currRotation);
         Destroy(currentPreviewBlock);
+        currentPreviewBlock = null; // Ensure reference is cleared
         if (cool.GetComponent<MoveableTile>() != null)
         {
             cool.GetComponent<MoveableTile>().state = state;
