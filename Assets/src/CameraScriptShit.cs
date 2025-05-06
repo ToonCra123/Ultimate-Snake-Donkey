@@ -10,8 +10,8 @@ public class CameraScriptShit : MonoBehaviour
 
     private Transform player;
 
-    private float followZoom = 10f;
-    private float sceneZoom = 30f;
+    private float followZoom = 7;
+    private float sceneZoom = 20f;
 
     private bool following;
     private bool inTransition;

@@ -25,6 +25,7 @@ public class GameStateManager : MonoBehaviour
     [Header("Selection Handler")]
     public SelectionHandler selectionHandler;
 
+
     private GAME_STATES gameState;
     private enum GAME_STATES
     {
@@ -130,6 +131,13 @@ public class GameStateManager : MonoBehaviour
 
     public void startSelecting()
     {
+        // Clean up any previous player object
+        if (playerShit != null)
+        {
+            Destroy(playerShit);
+            playerShit = null;
+        }
+        
         gameState = GAME_STATES.SELECTING;
         selectionBox.SetActive(true);
         selectionHandler.StartSelectingBlock();
