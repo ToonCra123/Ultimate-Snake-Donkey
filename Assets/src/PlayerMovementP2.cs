@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 
-public class PlayerMovment : MonoBehaviour
+public class PlayerMovmentP2 : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 8f;
@@ -60,9 +60,9 @@ public class PlayerMovment : MonoBehaviour
 
 
     [Header("Controls")]
-    public KeyCode leftKey = KeyCode.A;
-    public KeyCode rightKey = KeyCode.D;
-    public KeyCode jumpKey = KeyCode.W;
+    public KeyCode leftKey = KeyCode.LeftArrow;
+    public KeyCode rightKey = KeyCode.RightArrow;
+    public KeyCode jumpKey = KeyCode.UpArrow;
 
 
 
@@ -326,7 +326,7 @@ public class PlayerMovment : MonoBehaviour
 
     IEnumerator ReportDeath()
     {
-        string username = PlayerPrefs.GetString("Player1Username", "Unknown");
+        string username = PlayerPrefs.GetString("Player2Username", "Unknown");
 
         string jsonData = JsonUtility.ToJson(new UsernameWrapper { username = username });
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(jsonData);

@@ -10,13 +10,6 @@ public class MoveableTile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (state == null) return;
-        if (state.shouldObjectsMove())
-        {
-            float step = rotationSpeed * Time.deltaTime;
-
-            // Rotate around the rotatePoint
-            rotatingShit.RotateAround(rotatePoint.position, Vector3.forward, step);
-        }
+        
     }
 }

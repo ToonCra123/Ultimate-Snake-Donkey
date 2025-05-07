@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,12 @@ public class SettingsManager : MonoBehaviour
     public AudioSource musicSource;
     private const string MusicVolumeKey = "MusicVolume";
     private const string MusicMuteKey = "MusicMuted";
+
+    public TMP_InputField player1Input;
+    public TMP_InputField player2Input;
+    private const string Player1Key = "Player1Username";
+    private const string Player2Key = "Player2Username";
+
 
 
     void Start()
@@ -20,6 +27,15 @@ public class SettingsManager : MonoBehaviour
 
         // Listen for changes
         musicSlider.onValueChanged.AddListener(SetVolume);
+
+
+         // Existing music code...
+
+         player1Input.text = PlayerPrefs.GetString(Player1Key, "");
+        Debug.Log("Player 1 Username: " + PlayerPrefs.GetString(Player1Key, ""));
+        player2Input.text = PlayerPrefs.GetString(Player2Key, "");
+        Debug.Log("Player 2 Username: " + PlayerPrefs.GetString(Player2Key, ""));
+
     }
 
     public void SetVolume(float volume)
@@ -65,6 +81,22 @@ public class SettingsManager : MonoBehaviour
 
         PlayerPrefs.Save();
     }
+
+
+    public void SavePlayer1Username()
+    {
+        Debug.Log("Saving Player 1 Username: " + player1Input.text);
+        PlayerPrefs.SetString(Player1Key, player1Input.text);
+        PlayerPrefs.Save();
+    }
+
+    public void SavePlayer2Username()
+    {
+        Debug.Log("Saving Player 2 Username: " + player2Input.text);
+        PlayerPrefs.SetString(Player2Key, player2Input.text);
+        PlayerPrefs.Save();
+    }
+
 
 
 }

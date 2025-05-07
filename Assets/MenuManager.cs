@@ -9,6 +9,8 @@ public class MenuManager : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject titleScreen;
 
+
+
     public SpriteRenderer fadeSprite;
 
 
