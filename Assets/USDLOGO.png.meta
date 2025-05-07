@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: aa2c17251cf92b34e9ff30e9503ca4c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6442667374359520128
+    second: USDLOGO_0
+  - first:
+      213: -8288821912274903772
+    second: USDLOGO_1
+  - first:
+      213: 2611700377558002920
+    second: USDLOGO_2
+  - first:
+      213: -3750433923847256217
+    second: USDLOGO_3
+  - first:
+      213: -2723914006250991782
+    second: USDLOGO_4
+  - first:
+      213: 2144641061494632261
+    second: USDLOGO_5
+  - first:
+      213: -2471395628434894193
+    second: USDLOGO_6
+  - first:
+      213: -3069008888233968842
+    second: USDLOGO_7
+  - first:
+      213: -7428149544685376302
+    second: USDLOGO_8
+  - first:
+      213: 3005544780783105342
+    second: USDLOGO_9
+  - first:
+      213: 5747069441052795786
+    second: USDLOGO_10
+  - first:
+      213: -1330080644722381617
+    second: USDLOGO_11
+  - first:
+      213: -8701720486992068410
+    second: USDLOGO_12
+  - first:
+      213: -2225666876796799054
+    second: USDLOGO_13
+  - first:
+      213: -6792460968781039115
+    second: USDLOGO_14
+  - first:
+      213: -8542632269620908292
+    second: USDLOGO_15
+  - first:
+      213: -3137262415460833315
+    second: USDLOGO_16
+  - first:
+      213: 144631888273466091
+    second: USDLOGO_17
+  - first:
+      213: 6062231735814968102
+    second: USDLOGO_18
+  - first:
+      213: -2649748690490892660
+    second: USDLOGO_19
+  - first:
+      213: -1137907975466861512
+    second: USDLOGO_20
+  - first:
+      213: -2111040635250091859
+    second: USDLOGO_21
+  - first:
+      213: -8209422150752257161
+    second: USDLOGO_22
+  - first:
+      213: -2402274986349379060
+    second: USDLOGO_23
+  - first:
+      213: 3658035413494767955
+    second: USDLOGO_24
+  - first:
+      213: -1183935951037129587
+    second: USDLOGO_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: USDLOGO_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1536
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c5d41682c0796a0800000000000000
+      internalID: -6442667374359520128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_1
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 669
+        width: 118
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d5168036038fc80800000000000000
+      internalID: -8288821912274903772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 649
+        width: 150
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec2910f7af9e3420800000000000000
+      internalID: 2611700377558002920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_3
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 672
+        width: 44
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76782878738c3fbc0800000000000000
+      internalID: -3750433923847256217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_4
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 659
+        width: 193
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5fc2baa4a6b23ad0800000000000000
+      internalID: -2723914006250991782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_5
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 663
+        width: 145
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54faa11ceab43cd10800000000000000
+      internalID: 2144641061494632261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_6
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 868
+        width: 380
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f825fab15c6d3bdd0800000000000000
+      internalID: -2471395628434894193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_7
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 649
+        width: 148
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b3c4c2da0b865d0800000000000000
+      internalID: -3069008888233968842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_8
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 868
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc6c8a5859e9e890800000000000000
+      internalID: -7428149544685376302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_9
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 672
+        width: 117
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e353b17dd07d5b920800000000000000
+      internalID: 3005544780783105342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_10
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 665
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8364751531b1cf40800000000000000
+      internalID: 5747069441052795786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_11
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 391
+        width: 264
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc23b063ba9a8de0800000000000000
+      internalID: -1330080644722381617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_12
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1
+        width: 310
+        height: 408
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0491e12574d3780800000000000000
+      internalID: -8701720486992068410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 425
+        width: 154
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b77c2484c7dc11e0800000000000000
+      internalID: -2225666876796799054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_14
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 399
+        width: 176
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f9b915acb45cb1a0800000000000000
+      internalID: -6792460968781039115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_15
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 429
+        width: 179
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfee47a2639727980800000000000000
+      internalID: -8542632269620908292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_16
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 429
+        width: 160
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7e54f74743674d0800000000000000
+      internalID: -3137262415460833315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_17
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 407
+        width: 139
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2ebb3afe5d10200800000000000000
+      internalID: 144631888273466091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_18
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 194
+        width: 154
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623d95705af512450800000000000000
+      internalID: 6062231735814968102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_19
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 0
+        width: 239
+        height: 401
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8edb3fda933a3bd0800000000000000
+      internalID: -2649748690490892660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_20
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 189
+        width: 158
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83cb637a9b65530f0800000000000000
+      internalID: -1137907975466861512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_21
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 391
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da8d08d1ab314b2e0800000000000000
+      internalID: -2111040635250091859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_22
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 0
+        width: 245
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b303d9c06421e80800000000000000
+      internalID: -8209422150752257161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_23
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 195
+        width: 123
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02c6d1b0a769aed0800000000000000
+      internalID: -2402274986349379060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_24
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 0
+        width: 247
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351a725d3d3f3c230800000000000000
+      internalID: 3658035413494767955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: USDLOGO_25
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 341
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c1e997680d19fe0800000000000000
+      internalID: -1183935951037129587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0800c968e046a7d4a8fc0090fb04ad9c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      USDLOGO_0: -6442667374359520128
+      USDLOGO_1: -8288821912274903772
+      USDLOGO_10: 5747069441052795786
+      USDLOGO_11: -1330080644722381617
+      USDLOGO_12: -8701720486992068410
+      USDLOGO_13: -2225666876796799054
+      USDLOGO_14: -6792460968781039115
+      USDLOGO_15: -8542632269620908292
+      USDLOGO_16: -3137262415460833315
+      USDLOGO_17: 144631888273466091
+      USDLOGO_18: 6062231735814968102
+      USDLOGO_19: -2649748690490892660
+      USDLOGO_2: 2611700377558002920
+      USDLOGO_20: -1137907975466861512
+      USDLOGO_21: -2111040635250091859
+      USDLOGO_22: -8209422150752257161
+      USDLOGO_23: -2402274986349379060
+      USDLOGO_24: 3658035413494767955
+      USDLOGO_25: -1183935951037129587
+      USDLOGO_3: -3750433923847256217
+      USDLOGO_4: -2723914006250991782
+      USDLOGO_5: 2144641061494632261
+      USDLOGO_6: -2471395628434894193
+      USDLOGO_7: -3069008888233968842
+      USDLOGO_8: -7428149544685376302
+      USDLOGO_9: 3005544780783105342
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
