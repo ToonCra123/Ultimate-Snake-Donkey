@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GraphHandlerScript : MonoBehaviour
 {
+    [Header("Game State")]
+    public GameStateManager state;
+
     public Camera mainCamera;
     public GameObject currentPreviewBlock;
     public GameObject[] placeablePrefabs;
@@ -12,14 +15,14 @@ public class GraphHandlerScript : MonoBehaviour
     private bool placing = false;
     private Quaternion currRotation;
 
-    public List<Rect> blockedAreas = new List<Rect>() {
-        new Rect(-9f, -4f, -6f, -6f),  // Example: block area from (-2, -1) to (2, 1)
-        new Rect(3, 2, 2, 2)     // Another blocked zone
-    };
+    private int timeout = 500;
+    private int timout_timer = 0;
 
     void Update()
     {
         if (!placing) return;
+
+        selectedPrefab.SetActive(true);
 
         Vector2 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 snappedPos = Utils.SnapToGrid(mouseWorldPos);
@@ -31,6 +34,13 @@ public class GraphHandlerScript : MonoBehaviour
             currRotation = currentPreviewBlock.transform.rotation;
         }
 
+
+
+        if (timout_timer < timeout)
+        {
+            timout_timer++;
+            return;
+        }
         if (Input.GetMouseButtonDown(0) && CanPlaceBlock())
         {
             // Confirm placement
@@ -51,6 +61,8 @@ public class GraphHandlerScript : MonoBehaviour
 
     public void StartPlacingBlock(int index)
     {
+        timout_timer = 0;
+
         selectedPrefab = placeablePrefabs[index];
         currentPreviewBlock = Instantiate(selectedPrefab);
         currRotation = currentPreviewBlock.transform.rotation;
@@ -58,16 +70,16 @@ public class GraphHandlerScript : MonoBehaviour
         placing = true;
     }
 
-    bool IsInBlockedArea(Vector2 pos)
+    public void StartPlacingBlock(GameObject gmObj)
     {
-        foreach (Rect area in blockedAreas)
-        {
-            if (area.Contains(pos))
-            {
-                return true;
-            }
-        }
-        return false;
+        
+        gmObj.SetActive(false);
+        selectedPrefab = gmObj;
+        currentPreviewBlock = Instantiate(selectedPrefab);
+        currentPreviewBlock.SetActive(true);
+        currRotation = currentPreviewBlock.transform.rotation;
+        SetPreviewMode(currentPreviewBlock, true);
+        placing = true;
     }
 
     // Fix this plz
@@ -85,13 +97,15 @@ public class GraphHandlerScript : MonoBehaviour
 
     void PlaceBlock(Vector2 pos)
     {
-        if (IsInBlockedArea(pos))
-        {
-            Debug.Log("Blocked: This area is not allowed");
-            return;
-        }
-        Instantiate(selectedPrefab, pos, currRotation);
+        if (!CanPlaceBlock()) return;
+        GameObject cool = Instantiate(selectedPrefab, pos, currRotation);
         Destroy(currentPreviewBlock);
+        currentPreviewBlock = null; // Ensure reference is cleared
+        if (cool.GetComponent<MoveableTile>() != null)
+        {
+            cool.GetComponent<MoveableTile>().state = state;
+        }
+        timout_timer = 0;
         placing = false;
     }
 

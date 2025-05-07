@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - Kill Trigger
+  - winning_square
   layers:
   - Default
   - TransparentFX
