@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6968606534524836790}
   - component: {fileID: 3330678826624243240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: selection-box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9039553008752578401}
   - component: {fileID: 8159186828227291184}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SelectionBoxContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7068514087606425953}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3641482278418655252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8731929369584655046}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4092276040570819081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

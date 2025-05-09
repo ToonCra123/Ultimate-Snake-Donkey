@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
 
             if (!boxSpawned && boxPrefab && props.Length > 0)
             {
-                currentBox = Instantiate(boxPrefab, cameraFocusPoint.position, Quaternion.identity);
+                currentBox = Instantiate(boxPrefab, new Vector3(cameraFocusPoint.position.x, cameraFocusPoint.position.y, cameraFocusPoint.position.z - 5), Quaternion.identity);
                 boxSpawned = true;
 
                 SpawnPropsInBox(currentBox);
